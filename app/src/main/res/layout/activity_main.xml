@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FC504F4F"
     android:orientation="vertical"
-    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
     <!-- Encabezado superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#504F4F"
         android:padding="16dp">
 
         <!-- Título principal -->
@@ -19,6 +20,7 @@
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:orientation="horizontal"
@@ -29,11 +31,11 @@
             android:shadowRadius="2"
             android:text="Lector de Facturas"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="36sp"
+            android:textColor="#040404"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,10 +54,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="#000"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Imagen tomada o seleccionada -->
         <ImageView
@@ -65,10 +67,10 @@
             android:background="@android:color/black"
             android:scaleType="fitCenter"
             android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Botón cerrar imagen -->
         <ImageButton
@@ -79,9 +81,9 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:visibility="gone"
-            app:tint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:tint="#FFFFFF" />
 
         <!-- Botón cambiar cámara -->
         <ImageButton
@@ -90,11 +92,11 @@
             android:layout_height="56dp"
             android:layout_margin="16dp"
             android:background="@android:color/transparent"
-            android:src="@android:drawable/ic_menu_rotate"
             android:contentDescription="Cambiar cámara"
-            app:tint="#FFFFFF"
+            android:src="@android:drawable/ic_menu_rotate"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="#FFFFFF" />
 
         <!-- Indicador de análisis en vivo -->
         <TextView
@@ -107,8 +109,8 @@
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Panel de resultados -->
@@ -158,6 +160,7 @@
         android:id="@+id/layoutBotones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#504F4F"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="12dp"
@@ -202,8 +205,8 @@
                 android:layout_height="80dp"
                 android:background="@drawable/capture_button_background"
                 android:contentDescription="Tomar Foto"
-                android:src="@android:drawable/ic_menu_camera"
-                android:scaleType="centerInside" />
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_menu_camera" />
 
             <TextView
                 android:layout_width="wrap_content"

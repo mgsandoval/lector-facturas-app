@@ -50,18 +50,22 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
 
-    // Dependencia de ML Kit Image Labeling (on-device)
-    implementation("com.google.mlkit:image-labeling:17.0.8")
-    // ML Kit para traducción automática
-    implementation("com.google.mlkit:translate:17.0.2")
+    // ML Kit Text Recognition (OCR)
+    implementation("com.google.mlkit:text-recognition:16.0.1")
 
-    // CardView para un diseño más sencillo con bordes redondeados y sombras
+    // Auto-translate ML Kit
+    implementation("com.google.mlkit:translate:17.0.3")
+
+    // CardView for a simple desigm
     implementation("androidx.cardview:cardview:1.0.0")
     implementation(libs.constraintlayout)
+
+    // Retrofit for REST API communication
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
 }
